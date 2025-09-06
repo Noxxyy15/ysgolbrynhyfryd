@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policies & Information - Ysgol Brynhyfryd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/policies.css">
+</head>
+<body>
+<header>
+    <nav class="container nav-modern">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="School Logo" style="background: #f1c40f; border-radius: 5px;">
+        Ysgol Brynhyfryd
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="sixth-form.html">Sixth Form</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+
+<section class="page-hero fade-in">
+  <div class="container">
+    <h1>School Policies & Information</h1>
+    <p>Everything you need to know about our school procedures and expectations</p>
+  </div>
+</section>
+
+<main class="container">
+  <!-- Emergency Contacts -->
+  <section class="quick-contacts fade-in">
+    <h2>🚨 Important Contacts</h2>
+    <div class="contacts-grid">
+      <div class="contact-item">
+        <h3>Safeguarding Concerns</h3>
+        <p><strong>Lead:</strong> Ceri Ranson</p>
+        <p><strong>Deputies:</strong> Jo Pettigrew, Natalie Brant, Sue Boschi</p>
+      </div>
+      <div class="contact-item">
+        <h3>Emergency Child Protection</h3>
+        <p class="phone">📞 Children's Gateway: 01824 712200</p>
+        <p class="phone">📞 Out of hours: 0345 053 3116</p>
+      </div>
+      <div class="contact-item">
+        <h3>School Absences</h3>
+        <p class="phone">📞 Main Office: 01824 703933</p>
+        <p><em>Report on first day of absence</em></p>
+      </div>
+      <div class="contact-item">
+        <h3>General Enquiries</h3>
+        <p><strong>Headteacher's PA:</strong> Alys Crompton</p>
+        <p class="phone">📞 01824 703933</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Life Policies -->
+  <section class="policy-section fade-in">
+    <div class="section-header">
+      <h2>Student Life & Expectations</h2>
+      <p>Key information about behaviour, attendance, and student support</p>
+    </div>
+    <div class="policies-grid">
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">✅</span>
+            <h3>Behaviour & Engagement Policy</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>School Values:</strong> Ready, Respect, Safe
+          </div>
+          <div class="policy-details">
+            <p><strong>Students are expected to:</strong></p>
+            <ul>
+              <li>Arrive on time with correct equipment</li>
+              <li>Treat everyone with respect</li>
+              <li>Behave calmly to keep everyone safe</li>
+            </ul>
+            <p><strong>Good behaviour is recognised through:</strong> Praise postcards, phone calls home, celebration events</p>
+            <p><strong>Sanctions may include:</strong> Restorative meetings, loss of privileges, detentions</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">📚</span>
+            <h3>Attendance Policy</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Target:</strong> 95%+ attendance for all students
+          </div>
+          <div class="policy-details">
+            <p><strong>Parents must:</strong></p>
+            <ul>
+              <li>Ensure pupils arrive on time daily</li>
+              <li>Report absences on the <strong>first day</strong></li>
+              <li>Avoid term-time holidays (only authorised in exceptional circumstances)</li>
+            </ul>
+            <p><strong>Note:</strong> Penalty notices/fines may be issued for unauthorised absences</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🛡️</span>
+            <h3>Anti-Bullying Policy</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Ethos:</strong> Respect, safety, and support – bullying is never tolerated
+          </div>
+          <div class="policy-details">
+            <p><strong>How to report:</strong></p>
+            <ul>
+              <li>In person to any member of staff</li>
+              <li>Anonymous drop-box</li>
+              <li>Email the school</li>
+            </ul>
+            <p><strong>Covers:</strong> Physical, verbal, online, racist, homophobic, sexist, transphobic, disability-based, and appearance-based bullying</p>
+            <p><strong>Parents should:</strong> Talk to children, listen carefully, encourage reporting, and contact school with concerns</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🤝</span>
+            <h3>Inclusion & ALN Support</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Commitment:</strong> "Every pupil is equal, valued, and unique"
+          </div>
+          <div class="policy-details">
+            <p><strong>Process:</strong> Identify → Assess → Plan → Support → Review</p>
+            <p><strong>Parent involvement:</strong></p>
+            <ul>
+              <li>Fully involved in reviews and decision-making</li>
+              <li>Receive accessible written information</li>
+              <li>Encouraged to raise concerns with class teacher/ALNCo</li>
+            </ul>
+            <p><strong>Support levels:</strong> Universal, Universal Targeted, Individual Development Plans</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health & Safety -->
+  <section class="policy-section fade-in">
+    <div class="section-header">
+      <h2>Health & Safety</h2>
+      <p>Keeping your children safe and healthy at school</p>
+    </div>
+    <div class="policies-grid">
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🏥</span>
+            <h3>Healthcare & First Aid</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Long-term medical conditions require an Individual Healthcare Plan (IHP)</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>If your child is injured/unwell:</strong></p>
+            <ul>
+              <li>Taken to the Ganolfan (wellbeing centre) for assessment</li>
+              <li>Parents contacted if child needs to go home or hospital</li>
+              <li>Pupils cannot phone home themselves - staff will contact you</li>
+            </ul>
+            <p><strong>Parents must:</strong> Provide up-to-date medical information and medication</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🦠</span>
+            <h3>Illness & Infection Control</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Common exclusion rules to prevent spread of illness</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>Stay home for:</strong></p>
+            <ul>
+              <li><strong>Chickenpox:</strong> 5 days after rash appears, until spots scab over</li>
+              <li><strong>Sickness/diarrhoea:</strong> At least 48 hours clear</li>
+              <li><strong>Measles:</strong> 4 days after rash</li>
+              <li><strong>Impetigo:</strong> Until sores healed or 48hrs after antibiotics</li>
+            </ul>
+            <p>Contact school if child is unwell and follow NHS 111 Wales advice</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🛡️</span>
+            <h3>Safeguarding & Child Protection</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Protecting children from harm, neglect, abuse, and exploitation</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>All staff must report concerns the same day</strong></p>
+            <p><strong>Contact details above in Important Contacts section</strong></p>
+            <p><strong>Prevent Duty:</strong> Staff monitor for risks of radicalisation</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School Operations -->
+  <section class="policy-section fade-in">
+    <div class="section-header">
+      <h2>School Operations</h2>
+      <p>Important information about admissions, costs, and procedures</p>
+    </div>
+    <div class="policies-grid">
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">📝</span>
+            <h3>Admissions Arrangements</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Applications required for each school stage - transfer is NOT automatic</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>Typical deadlines:</strong></p>
+            <ul>
+              <li><strong>Secondary:</strong> Applications open Sept, close early Nov, offers March</li>
+              <li><strong>Reception/Junior:</strong> Open Sept, close Nov, offers April</li>
+              <li><strong>Nursery:</strong> Open Sept, close Feb, offers May</li>
+            </ul>
+            <p><strong>Oversubscription criteria:</strong> Looked After Children, SEN statements, nearest school, siblings, feeder schools, distance</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">💷</span>
+            <h3>Charging & Costs</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>What's free and what may cost extra</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>FREE:</strong></p>
+            <ul>
+              <li>Normal school education and activities in school hours</li>
+              <li>School-arranged transport</li>
+              <li>Curriculum-based trips and exams (if pupil prepared at school)</li>
+            </ul>
+            <p><strong>MAY CHARGE FOR:</strong></p>
+            <ul>
+              <li>Optional activities outside school hours</li>
+              <li>Materials for practical subjects (if pupil keeps the product)</li>
+              <li>Private instrument lessons</li>
+              <li>Exam retakes (if not prepared at school)</li>
+            </ul>
+            <p><strong>Financial help available for families in certain circumstances</strong></p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">❓</span>
+            <h3>Complaints Procedure</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>Clear process for raising concerns or complaints</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>Stage A (Informal):</strong> Speak to teacher or Headteacher's PA (Alys Crompton) - raise within 10 school days</p>
+            <p><strong>Stage B (Formal):</strong> Investigation by senior staff/governors</p>
+            <p><strong>Stage C (Appeal):</strong> Governing body panel review</p>
+            <p><strong>Note:</strong> Pupils under 16 may complain themselves, with or without parents</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+
+      <div class="policy-card" onclick="togglePolicy(this)">
+        <div class="policy-header">
+          <div class="policy-title">
+            <span class="policy-icon">🔒</span>
+            <h3>Data Protection & Privacy</h3>
+          </div>
+          <span class="expand-icon">▼</span>
+        </div>
+        <div class="policy-content">
+          <div class="policy-summary">
+            <strong>How we protect and use your personal information</strong>
+          </div>
+          <div class="policy-details">
+            <p><strong>We promise to:</strong></p>
+            <ul>
+              <li>Use personal data fairly, lawfully, and only when needed</li>
+              <li>Keep it secure</li>
+              <li>Allow access, correction, or deletion where appropriate</li>
+              <li>Inform families how data is used and shared</li>
+            </ul>
+            <p><strong>Subject Access Requests:</strong> Parents/pupils can ask what data is held - we respond within 1 month</p>
+          </div>
+          <a href="#" class="download-btn">📄 Download Full Policy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Contact</h4>
+      <p>Ysgol Brynhyfryd<br>Ffordd Ruthin, Ruthin LL15 1EG<br>Tel: 01824 703933</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="news.html">Term Dates</a></li>
+        <li><a href="policies.html">School Policies</a></li>
+        <li><a href="news.html">Letters</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="assets/images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2024 Ysgol Brynhyfryd. All rights reserved | website by Nox</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/policies.js" defer></script>
+</body>
+</html>

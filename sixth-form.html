@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sixth Form - Ysgol Brynhyfryd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Sixth Form Page Specific Styles */
+    .page-hero {
+      background: linear-gradient(135deg, #006A4E 0%, #2F5233 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f1c40f;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Quick Info Bar */
+    .quick-info-bar {
+      background: white;
+      margin: -2rem 0 3rem 0;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .info-item {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #f8f9fa;
+    }
+
+    .info-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #3498db;
+    }
+
+    .info-item h3 {
+      color: #2c3e50;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-item p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Welcome Section */
+    .welcome-section {
+      margin: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .welcome-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .welcome-text p {
+      margin-bottom: 1.5rem;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #006A4E;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,106,78,0.3);
+    }
+
+    .welcome-image {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .welcome-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Subjects Section */
+    .subjects-section {
+      margin: 4rem 0;
+    }
+
+    .subjects-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #2c3e50;
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .subject-category {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .subject-category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #f8f9fa;
+    }
+
+    .category-icon {
+      font-size: 2rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      background: #f8f9fa;
+    }
+
+    .category-header h3 {
+      color: #2c3e50;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .subjects-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .subjects-list li {
+      padding: 0.5rem 0;
+      color: #666;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    .subjects-list li:last-child {
+      border-bottom: none;
+    }
+
+    .bilingual-note {
+      background: #e8f6f3;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #006A4E;
+      margin-top: 2rem;
+    }
+
+    .bilingual-note h4 {
+      color: #006A4E;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Requirements Section */
+    .requirements-section {
+      background: #f8f9fa;
+      padding: 3rem 0;
+      margin: 3rem 0;
+    }
+
+    .requirements-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .requirements-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .requirements-card h3 {
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-icon {
+      font-size: 1.3rem;
+      color: #3498db;
+    }
+
+    .requirements-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .requirements-list li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f1f1f1;
+      color: #666;
+    }
+
+    .requirements-list li:last-child {
+      border-bottom: none;
+    }
+
+    .grade-requirement {
+      font-weight: 600;
+      color: #e74c3c;
+    }
+
+    /* Support Section */
+    .support-section {
+      margin: 4rem 0;
+    }
+
+    .support-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #2c3e50;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .support-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .support-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .support-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #3498db;
+    }
+
+    .support-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .support-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Application Section */
+    .application-section {
+      background: #006A4E;
+      color: white;
+      padding: 3rem 0;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .application-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .application-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .step-item {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    .step-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f1c40f;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-item h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .step-item p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .application-cta {
+      margin-top: 2rem;
+    }
+
+    .cta-button.white {
+      background: white;
+      color: #006A4E;
+    }
+
+    .cta-button.white:hover {
+      box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-stats {
+        gap: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .quick-info-bar {
+        grid-template-columns: 1fr;
+        margin: -1rem 1rem 2rem 1rem;
+      }
+
+      .welcome-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .subjects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .requirements-content {
+        grid-template-columns: 1fr;
+      }
+
+      .application-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+    <nav class="container nav-modern">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="School Logo" style="background: #f1c40f; border-radius: 5px;">
+        Ysgol Brynhyfryd
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="sixth-form.html" class="active">Sixth Form</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+
+<section class="page-hero fade-in">
+  <div class="container">
+    <h1>Sixth Form at Brynhyfryd</h1>
+    <p>Your pathway to university and beyond • Eich llwybr i'r brifysgol a thu hwnt</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">A-Level Subjects</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">95%</span>
+        <span class="stat-label">University Progression</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Info Bar -->
+<section class="container">
+  <div class="quick-info-bar fade-in">
+    <div class="info-item">
+      <div class="info-icon">🎓</div>
+      <h3>Ages 16-18</h3>
+      <p>Years 12 & 13</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📚</div>
+      <h3>A-Level Courses</h3>
+      <p>Wide subject choice</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🌍</div>
+      <h3>Bilingual Options</h3>
+      <p>Welsh & English</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🏛️</div>
+      <h3>University Prep</h3>
+      <p>UCAS & careers support</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🤝</div>
+      <h3>Small Classes</h3>
+      <p>Individual attention</p>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <!-- Welcome Section -->
+  <section class="welcome-section fade-in">
+    <div class="welcome-text">
+      <h2>Welcome to Our Sixth Form</h2>
+      <p>Our Sixth Form offers an outstanding educational experience for students aged 16-18. We provide a supportive, mature learning environment where students can develop academically, personally, and socially while preparing for university and their future careers.</p>
+      <p>With our bilingual approach, small class sizes, and dedicated staff, we ensure every student receives the individual attention they need to achieve their potential. Our excellent track record of university placements and career success speaks to our commitment to student achievement.</p>
+      <a href="#application" class="cta-button">Apply to Our Sixth Form</a>
+    </div>
+    <div class="welcome-image">
+      <img src="assets/images/sixth-form-students.jpg" alt="Sixth Form Students" style="background: linear-gradient(45deg, #2c3e50, #3498db); min-height: 300px;">
+    </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section class="subjects-section fade-in">
+    <h2>A-Level Subjects Available</h2>
+    <div class="subjects-grid">
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #e74c3c;">🔬</div>
+          <h3>Sciences</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>Biology</li>
+          <li>Chemistry</li>
+          <li>Physics</li>
+          <li>Psychology</li>
+        </ul>
+      </div>
+
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #3498db;">📊</div>
+          <h3>Mathematics & Technology</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>Mathematics</li>
+          <li>Further Mathematics</li>
+          <li>Computer Science</li>
+          <li>Design & Technology</li>
+        </ul>
+      </div>
+
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #f39c12;">📚</div>
+          <h3>Humanities</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>History</li>
+          <li>Geography</li>
+          <li>Religious Studies</li>
+          <li>Sociology</li>
+        </ul>
+      </div>
+
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #9b59b6;">🎨</div>
+          <h3>Creative & Languages</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>Art & Design</li>
+          <li>Music</li>
+          <li>Drama & Theatre Studies</li>
+          <li>Media Studies</li>
+        </ul>
+      </div>
+
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #27ae60;">🏴󠁧󠁢󠁷󠁬󠁳󠁿</div>
+          <h3>Languages</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>English Literature</li>
+          <li>Welsh (First Language)</li>
+          <li>Welsh (Second Language)</li>
+          <li>French</li>
+        </ul>
+      </div>
+
+      <div class="subject-category">
+        <div class="category-header">
+          <div class="category-icon" style="color: #34495e;">💼</div>
+          <h3>Business & Economics</h3>
+        </div>
+        <ul class="subjects-list">
+          <li>Business Studies</li>
+          <li>Economics</li>
+          <li>Law</li>
+          <li>Government & Politics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bilingual-note">
+      <h4>🌍 Bilingual Education</h4>
+      <p>Many of our A-Level subjects can be studied through the medium of Welsh or English, giving our students the advantage of bilingual qualifications that are highly valued by universities and employers.</p>
+    </div>
+  </section>
+
+  <!-- Entry Requirements -->
+  <section class="requirements-section">
+    <div class="container requirements-content fade-in">
+      <div class="requirements-card">
+        <h3>
+          <span class="card-icon">📋</span>
+          Entry Requirements
+        </h3>
+        <ul class="requirements-list">
+          <li><span class="grade-requirement">5 GCSEs at Grade C/4 or above</span> including English and Mathematics</li>
+          <li><span class="grade-requirement">Grade B/6 or above</span> in subjects you wish to study at A-Level</li>
+          <li>Satisfactory attendance and behavior record</li>
+          <li>Commitment to two-year A-Level program</li>
+          <li>Meeting subject-specific requirements where applicable</li>
+        </ul>
+      </div>
+
+      <div class="requirements-card">
+        <h3>
+          <span class="card-icon">⭐</span>
+          What We Offer
+        </h3>
+        <ul class="requirements-list">
+          <li>Expert teaching from specialist A-Level staff</li>
+          <li>Small class sizes ensuring individual attention</li>
+          <li>Comprehensive UCAS and university application support</li>
+          <li>Career guidance and work experience opportunities</li>
+          <li>Study skills development and exam preparation</li>
+          <li>Access to higher education resources and facilities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Services -->
+  <section class="support-section fade-in">
+    <h2>Supporting Your Success</h2>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">🎯</div>
+        <h3>Academic Support</h3>
+        <p>Personal tutors, study skills workshops, and extra revision sessions to help you achieve your target grades.</p>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">🏛️</div>
+        <h3>University Guidance</h3>
+        <p>Comprehensive UCAS support, personal statement guidance, and university visit arrangements.</p>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">💼</div>
+        <h3>Career Development</h3>
+        <p>Work experience placements, career talks, and guidance to help you make informed future choices.</p>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">🤝</div>
+        <h3>Pastoral Care</h3>
+        <p>Dedicated Sixth Form pastoral team providing wellbeing support and guidance throughout your studies.</p>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">📚</div>
+        <h3>Study Environment</h3>
+        <p>Dedicated Sixth Form study areas, library access, and quiet spaces for independent learning.</p>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">🌟</div>
+        <h3>Leadership Opportunities</h3>
+        <p>Head Boy/Girl positions, prefect roles, and opportunities to mentor younger students.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section class="application-section fade-in" id="application">
+    <div class="container">
+      <h2>How to Apply</h2>
+      <div class="application-steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h4>Initial Enquiry</h4>
+          <p>Contact our Sixth Form team or attend an open evening</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h4>Application Form</h4>
+          <p>Complete and submit your Sixth Form application</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h4>Interview</h4>
+          <p>Attend an informal interview to discuss your goals</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <h4>GCSE Results</h4>
+          <p>Meet entry requirements with your GCSE grades</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <h4>Enrollment</h4>
+          <p>Complete enrollment and begin your A-Level journey</p>
+        </div>
+      </div>
+      <div class="application-cta">
+        <a href="contact.html" class="cta-button white">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Contact</h4>
+      <p>Ysgol Brynhyfryd<br>Mold Road, Ruthin LL15 1EG<br>Tel: 01824 703933</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="news.html">Term Dates</a></li>
+        <li><a href="policies.html">School Policies</a></li>
+        <li><a href="news.html">Letters</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="assets/images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2024 Ysgol Brynhyfryd. All rights reserved | website by Nox</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
